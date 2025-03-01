@@ -1,0 +1,55 @@
+/* Container styling */
+.create-room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Input field */
+.create-room-container input {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  text-align: center;
+}
+
+/* Buttons */
+.create-room-container button {
+  width: 80%;
+  max-width: 200px;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: #6200ea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.create-room-container button:hover {
+  background: #3700b3;
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .create-room-container {
+    padding: 10px;
+  }
+
+  .create-room-container input,
+  .create-room-container button {
+    width: 90%;
+  }
+}
