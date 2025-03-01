@@ -4,6 +4,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 require("dotenv").config();
+const MONGODB_URI="mongodb+srv://yashveer8000:LXEWfLvG4erBt8VR@cluster1.j5ezk.mongodb.net/melodychat?retryWrites=true&w=majority&appName=Cluster1";
 
 const app = express();
 const server = http.createServer(app);
@@ -19,7 +20,7 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -157,7 +158,7 @@ io.on("connection", (socket) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 server.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
